@@ -137,10 +137,10 @@ namespace GitHub3
     public class GitHub3Plugin : GitPluginBase, IRepositoryHostPlugin
     {
         // TODO add caption to StringSettings
-        public readonly StringSetting OAuthToken = new StringSetting("OAuth Token for github.com", "");
+        public readonly PasswordSetting OAuthToken = new PasswordSetting("OAuth Token for github.com", "");
         public readonly BoolSetting IsUsingGitHubEnterpriseSettings = new BoolSetting("Use GitHub Enterprise", false);
         public readonly StringSetting GitHubEnterpriseDomain = new StringSetting("Github Enterprise Domain", "");
-        public readonly StringSetting OAuthToken_gitHubEnterprise = new StringSetting("OAuth Token (github.com)", "");
+        public readonly PasswordSetting OAuthToken_gitHubEnterprise = new PasswordSetting("OAuth Token (github.com)", "");
 
         internal static GitHub3Plugin Instance;
 
