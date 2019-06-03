@@ -61,7 +61,10 @@ namespace GitUI.Avatars
                 try
                 {
                     var username = match.Groups["username"].Value;
-                    var client = new Git.hub.Client();
+
+                    // TODO: Update to use option-based github URL
+                    string githubEndpointURL = "https://api.github.com";
+                    var client = new Git.hub.Client(githubEndpointURL);
                     var user = client.GetUser(username);
                     if (!string.IsNullOrEmpty(user?.AvatarUrl))
                     {
